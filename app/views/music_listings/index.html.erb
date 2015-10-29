@@ -1,0 +1,35 @@
+<h1>Listing music_listings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Videolink</th>
+      <th>Imagelink</th>
+      <th>Infolink</th>
+      <th>Language</th>
+      <th>Music category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @music_listings.each do |music_listing| %>
+      <tr>
+        <td><%= music_listing.name %></td>
+        <td><%= music_listing.videolink %></td>
+        <td><%= music_listing.imagelink %></td>
+        <td><%= music_listing.infolink %></td>
+        <td><%= music_listing.language_id %></td>
+        <td><%= music_listing.music_category_id %></td>
+        <td><%= link_to 'Show', music_listing %></td>
+        <td><%= link_to 'Edit', edit_music_listing_path(music_listing) %></td>
+        <td><%= link_to 'Destroy', music_listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Music listing', new_music_listing_path %>

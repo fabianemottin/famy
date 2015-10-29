@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tv_listing.name %>
+</p>
+
+<p>
+  <strong>Videolink:</strong>
+  <%= @tv_listing.videolink %>
+</p>
+
+<p>
+  <strong>Imagelink:</strong>
+  <%= @tv_listing.imagelink %>
+</p>
+
+<p>
+  <strong>Infolink:</strong>
+  <%= @tv_listing.infolink %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @tv_listing.language_id %>
+</p>
+
+<p>
+  <strong>Tv category:</strong>
+  <%= @tv_listing.tv_category_id %>
+</p>
+
+<%= link_to 'Edit', edit_tv_listing_path(@tv_listing) %> |
+<%= link_to 'Back', tv_listings_path %>

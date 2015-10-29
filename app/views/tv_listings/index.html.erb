@@ -1,0 +1,35 @@
+<h1>Listing tv_listings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Videolink</th>
+      <th>Imagelink</th>
+      <th>Infolink</th>
+      <th>Language</th>
+      <th>Tv category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tv_listings.each do |tv_listing| %>
+      <tr>
+        <td><%= tv_listing.name %></td>
+        <td><%= tv_listing.videolink %></td>
+        <td><%= tv_listing.imagelink %></td>
+        <td><%= tv_listing.infolink %></td>
+        <td><%= tv_listing.language_id %></td>
+        <td><%= tv_listing.tv_category_id %></td>
+        <td><%= link_to 'Show', tv_listing %></td>
+        <td><%= link_to 'Edit', edit_tv_listing_path(tv_listing) %></td>
+        <td><%= link_to 'Destroy', tv_listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tv listing', new_tv_listing_path %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @music_listing.name %>
+</p>
+
+<p>
+  <strong>Videolink:</strong>
+  <%= @music_listing.videolink %>
+</p>
+
+<p>
+  <strong>Imagelink:</strong>
+  <%= @music_listing.imagelink %>
+</p>
+
+<p>
+  <strong>Infolink:</strong>
+  <%= @music_listing.infolink %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @music_listing.language_id %>
+</p>
+
+<p>
+  <strong>Music category:</strong>
+  <%= @music_listing.music_category_id %>
+</p>
+
+<%= link_to 'Edit', edit_music_listing_path(@music_listing) %> |
+<%= link_to 'Back', music_listings_path %>

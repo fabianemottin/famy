@@ -1,0 +1,48 @@
+<%= form_for(@music_listing) do |f| %>
+  <% if @music_listing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@music_listing.errors.count, "error") %> prohibited this music_listing from being saved:</h2>
+
+      <ul>
+      <% @music_listing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :videolink %><br>
+    <%= f.text_field :videolink %>
+  </div>
+  <div class="field">
+    <%= f.label :imagelink %><br>
+    <%= f.text_field :imagelink %>
+  </div>
+  <div class="field">
+    <%= f.label :infolink %><br>
+    <%= f.text_field :infolink %>
+  </div>
+  <div class="field">
+    <%= f.label :language_id %><br>
+    <%= f.number_field :language_id %>
+  </div>
+
+  </div>
+    <div class="field">
+    <%= f.label :language_id %><br>
+    <%= collection_select(:item, :language_id, Category.all, :id, :name) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :music_category_id %><br>
+    <%= f.number_field :music_category_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

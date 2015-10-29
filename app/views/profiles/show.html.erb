@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @profile.user_id %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @profile.language_id %>
+</p>
+
+<p>
+  <strong>Music category:</strong>
+  <%= @profile.music_category_id %>
+</p>
+
+<p>
+  <strong>Film category:</strong>
+  <%= @profile.film_category_id %>
+</p>
+
+<p>
+  <strong>Tv category:</strong>
+  <%= @profile.tv_category_id %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>
