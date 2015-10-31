@@ -15,16 +15,30 @@
 
 </head>
 
-<body bgcolor="#f9f7d4">
+<body class="home">
 
-<%= image_tag "lg-poptalk.png" %>
+	  <div class="row">
+        <div class="col-md-3"></div>
+        
+        <div class="col-md-6">
+	        <div class="logo">
+	        	<%= image_tag "lg300.png"%>
+	        </div>
 
-<% if user_signed_in? %>
-	<%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+	        <div class="login">
+		        <% if user_signed_in? %>
+					<%= link_to 'Logout', destroy_user_session_test_path, :method => :delete %>
+				<%end %>
+			</div>
 
-<%end %>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+
+
 
 <%= yield %>
-</body>
 
+
+</body>
 </html>

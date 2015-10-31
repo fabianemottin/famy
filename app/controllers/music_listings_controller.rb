@@ -42,6 +42,6 @@ class MusicListingsController < ApplicationController
     end
 
     def music_listing_params
-      params.require(:music_listing).permit(:name, :videolink, :imagelink, :infolink, :language_id, :music_category_id)
+      params.require(:music_listing).permit(:name, :videolink, :imagelink, :infolink, :language_id, :music_category_id, :avatar)
     end
 end

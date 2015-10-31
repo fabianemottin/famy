@@ -6,9 +6,38 @@
 </p>
 
 <p>
-  <strong>Profile:</strong>
-  <%= @user.profile_id %>
+  <strong>Email</strong>
+  <%= @user.email %>
 </p>
+
+<p>
+  <strong>Language</strong>
+  <% if !@user.language.nil? %>
+  <%= @user.language.language %>
+<%end%>
+</p>
+
+<p>
+  <strong>Music Preferences</strong>
+  <% if !@user.music_category.nil? %>
+  <%= @user.music_category.category %>
+<%end%>
+</p>
+
+<p>
+  <strong>Film Preferences</strong>
+  <% if !@user.film_category.nil? %>
+  <%= @user.film_category.category %>
+<%end%>
+</p>
+
+<p>
+  <strong>Tv Preferences</strong>
+  <% if !@user.tv_category.nil? %>
+  <%= @user.tv_category.category %>
+<%end%>
+</p>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

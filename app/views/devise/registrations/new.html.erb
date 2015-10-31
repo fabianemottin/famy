@@ -1,3 +1,29 @@
+<style type="text/css">
+.background_image{
+  
+  background: url('/assets/pop-background.png');
+}
+</style>
+
+
+<head>
+  <title>Famy</title>
+  
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>    <%= csrf_meta_tags %>
+
+</head>
+
+<body class="background_image">
+
+
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -15,22 +41,22 @@
 
    <div class="field">
     <%= f.label :language %><br>
-    <%= collection_select(:profile, :language_id, Language.all, :id, :language) %>
+    <%= collection_select(:user, :language_id, Language.all, :id, :language) %>
   </div>
 
    <div class="field">
     <%= f.label :music_category %><br>
-    <%= collection_select(:profile, :music_category_id, MusicCategory.all, :id, :category) %>
+    <%= collection_select(:user, :music_category_id, MusicCategory.all, :id, :category) %>
   </div>
 
      <div class="field">
     <%= f.label :film_category %><br>
-    <%= collection_select(:profile, :film_category_id, FilmCategory.all, :id, :category) %>
+    <%= collection_select(:user, :film_category_id, FilmCategory.all, :id, :category) %>
   </div>
 
      <div class="field">
     <%= f.label :tv_category %><br>
-    <%= collection_select(:profile, :tv_category_id, TvCategory.all, :id, :category) %>
+    <%= collection_select(:user, :tv_category_id, TvCategory.all, :id, :category) %>
   </div>
 
   <div class="field">
@@ -52,3 +78,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</body>

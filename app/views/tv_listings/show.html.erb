@@ -1,34 +1,37 @@
-<p id="notice"><%= notice %></p>
+
+
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+
+<div class="video">
 
 <p>
-  <strong>Name:</strong>
-  <%= @tv_listing.name %>
+  <strong><%= @tv_listing.name %></strong>
 </p>
 
 <p>
-  <strong>Videolink:</strong>
-  <%= @tv_listing.videolink %>
+ <%= @tv_listing.language_id %>
 </p>
+
+<iframe width="720" height="480" src="https://www.youtube.com/embed/hIZMyKNjRWk" frameborder="0" allowfullscreen></iframe>
+
+</div>
+
+<div>
 
 <p>
-  <strong>Imagelink:</strong>
-  <%= @tv_listing.imagelink %>
+<strong>Share your favorite quote from this movie</strong>
 </p>
 
-<p>
-  <strong>Infolink:</strong>
-  <%= @tv_listing.infolink %>
-</p>
 
-<p>
-  <strong>Language:</strong>
-  <%= @tv_listing.language_id %>
-</p>
 
-<p>
-  <strong>Tv category:</strong>
-  <%= @tv_listing.tv_category_id %>
-</p>
 
-<%= link_to 'Edit', edit_tv_listing_path(@tv_listing) %> |
-<%= link_to 'Back', tv_listings_path %>
+</div>
+
+
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+
+
