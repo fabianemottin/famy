@@ -27,13 +27,14 @@
     <%= f.label :infolink %><br>
     <%= f.text_field :infolink %>
   </div>
-  <div class="field">
+ <div class="field">
     <%= f.label :language_id %><br>
-    <%= f.number_field :language_id %>
+    <%= collection_select(:film_listing, :language_id, Language.all, :id, :language) %>
   </div>
-  <div class="field">
-    <%= f.label :film_category_id %><br>
-    <%= f.number_field :film_category_id %>
+
+    <div class="field">
+    <%= f.label :film_id %><br>
+    <%= collection_select(:film_listing, :film_category_id, FilmCategory.all, :id, :category) %>
   </div>
   <div class="actions">
     <%= f.submit %>

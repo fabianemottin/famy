@@ -16,6 +16,13 @@ Rails.application.routes.draw do
   resources :profiles
 
   devise_for :users
+  devise_scope :user do 
+    get "sign_out", :to => "devise/sessions#destroy", :as => :destroy_user_session_test
+    get "sign_in", :to => "devise/sessions#new", :as => :new_user_session_test
+    #get "sign_up", :to => "devise/registrations#new"
+    #post "sign_up", :to => "devise/registrations#new", :as => :new_registration_test
+
+    end
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -25,7 +32,7 @@ Rails.application.routes.draw do
   root 'main#welcome'
 
   # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  get 'profile' => 'main#profile'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

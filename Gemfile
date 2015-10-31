@@ -10,6 +10,9 @@ gem 'sqlite3'
 gem 'devise'
 # user authentication
 
+gem "paperclip", "~> 4.3"
+# for uploading images
+
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

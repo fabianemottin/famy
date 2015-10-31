@@ -15,22 +15,22 @@
 
    <div class="field">
     <%= f.label :language %><br>
-    <%= collection_select(:profile, :language_id, Language.all, :id, :language) %>
+    <%= collection_select(:user, :language_id, Language.all, :id, :language) %>
   </div>
 
    <div class="field">
     <%= f.label :music_category %><br>
-    <%= collection_select(:profile, :music_category_id, MusicCategory.all, :id, :category) %>
+    <%= collection_select(:user, :music_category_id, MusicCategory.all, :id, :category) %>
   </div>
 
      <div class="field">
     <%= f.label :film_category %><br>
-    <%= collection_select(:profile, :film_category_id, FilmCategory.all, :id, :category) %>
+    <%= collection_select(:user, :film_category_id, FilmCategory.all, :id, :category) %>
   </div>
 
      <div class="field">
     <%= f.label :tv_category %><br>
-    <%= collection_select(:profile, :tv_category_id, TvCategory.all, :id, :category) %>
+    <%= collection_select(:user, :tv_category_id, TvCategory.all, :id, :category) %>
   </div>
 
   <div class="field">
