@@ -11,7 +11,6 @@ gem 'devise'
 # user authentication
 
 gem "paperclip", "~> 4.3"
-# for uploading images
 
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets

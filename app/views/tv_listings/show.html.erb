@@ -1,36 +1,48 @@
-<p id="notice"><%= notice %></p>
 
 <div class="row">
-<div class="col-md-4"></div>
-<div class="col-md-4">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
 
 
-<p>
-  <h1><%= @tv_listing.name%></h1>
+  <p>
+    <h1><%= @tv_listing.name%></h1>
+  </p>
+
+  <p>
+  <%= raw(@tv_listing.videolink) %>
+  </p>
+
+
+
+  <p>
+
+    <strong>Find out more here:</strong>
+    <%= @tv_listing.infolink %>
+  </p>
+
+  <p>
+    <strong>Language:</strong>
+    <%= @tv_listing.language.language %>
+  </p>
+
+  <p>
+    <strong>Song category:</strong>
+    <%= @tv_listing.tv_category.category %>
+  </p>
+
+  <%= link_to 'Edit', edit_tv_listing_path(@tv_listing) %> |
+  <%= link_to 'Back', tv_listings_path %>
+<p style="padding-top:10px;">
+   <strong>Share your favorite quote from this movie</strong>
 </p>
+  </div>
+  <div class="col-md-4"></div>
 
-<p>
-<%= raw(@tv_listing.videolink) %>
-</p>
+ 
 
 
-<p>
-  <strong>Find out more here:</strong>
-  <%= @tv_listing.infolink %>
-</p>
-
-<p>
-  <strong>Language:</strong>
-  <%= @tv_listing.language.language %>
-</p>
-
-<p>
-  <strong>Song category:</strong>
-  <%= @tv_listing.tv_category.category %>
-</p>
-
-<%= link_to 'Edit', edit_tv_listing_path(@tv_listing) %> |
-<%= link_to 'Back', tv_listings_path %>
 
 </div>
-<div class="col-md-4"></div>
+
+
+  </p>

@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 before_action :configure_devise_permitted_parameters, if: :devise_controller?
 
+layout :layout
+
   protected
 
   def configure_devise_permitted_parameters
@@ -19,5 +21,12 @@ before_action :configure_devise_permitted_parameters, if: :devise_controller?
       }
     end
   end
+
+  private
+
+  def layout
+  #  is_a?(Devise::SesssionsController) ? false: "application"
+  !devise_controller? && "application"
+end
 
 end
