@@ -15,8 +15,9 @@
 
 </head>
 
-<body>
-<img src="https://upload.wikimedia.org/wikipedia/en/f/f2/Seesmic_Logo.png">
+<body bgcolor="#f9f7d4">
+
+<%= image_tag "lg-poptalk.png" %>
 
 <% if user_signed_in? %>
 	<%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
