@@ -42,6 +42,6 @@ class TvListingsController < ApplicationController
     end
 
     def tv_listing_params
-      params.require(:tv_listing).permit(:name, :videolink, :imagelink, :infolink, :language_id, :tv_category_id)
+      params.require(:tv_listing).permit(:name, :videolink, :imagelink, :infolink, :language_id, :tv_category_id, :avatar)
     end
 end

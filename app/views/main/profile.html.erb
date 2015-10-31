@@ -1,107 +1,56 @@
-<h1>Profile</h1>
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4">
+  <% if user_signed_in? %>
+  <h1><%= "Hi " + current_user.name %><h1>
+  <% else %>
+  <%= "Welcome" %>
+  <%end%>
+  <h1>Your pop culture eductaion begins here <h1>
+</div>
+
+<div class="col-md-4"></div>
+</div>
 
 <div class="row">
-  <div class="col-md-3">
-
-  </div>
-
-<div class="col-md-9">
-<h1>Music recommended for you:</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Videolink</th>
-      <th>Imagelink</th>
-      <th>Infolink</th>
-      <th>Language</th>
-      <th>Music category</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @songs.each do |music_listing| %>
-      <tr>
-        <td><%= music_listing.name %></td>
-        <td><%= music_listing.videolink %></td>
-        <td><%= music_listing.imagelink %></td>
-        <td><%= music_listing.infolink %></td>
-        <td><%= music_listing.language_id %></td>
-        <td><%= music_listing.music_category_id %></td>
-        <td><%= link_to 'Show', music_listing %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<h1>Films reccommended for you:</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Videolink</th>
-      <th>Imagelink</th>
-      <th>Infolink</th>
-      <th>Language</th>
-      <th>Film category</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @films.each do |film_listing| %>
-      <tr>
-        <td><%= film_listing.name %></td>
-        <td><%= film_listing.videolink %></td>
-        <td><%= film_listing.imagelink %></td>
-        <td><%= film_listing.infolink %></td>
-        <td><%= film_listing.language_id %></td>
-        <td><%= film_listing.film_category_id %></td>
-        <td><%= link_to 'Show', film_listing %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<h1>TV shows reccommended for you:</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Videolink</th>
-      <th>Imagelink</th>
-      <th>Infolink</th>
-      <th>Language</th>
-      <th>Tv category</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tv.each do |tv_listing| %>
-      <tr>
-        <td><%= tv_listing.name %></td>
-        <td><%= tv_listing.videolink %></td>
-        <td><%= tv_listing.imagelink %></td>
-        <td><%= tv_listing.infolink %></td>
-        <td><%= tv_listing.language_id %></td>
-        <td><%= tv_listing.tv_category_id %></td>
-        <td><%= link_to 'Show', tv_listing %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-
-<br>
-
+<div class="col-md-1"></div>
+<div class="col-md-11">
+    <h2>Song recommendations for you:</h2>
 </div>
+</div>
+<div class="row">
+<div class="col-md-0"></div>
+<div class="col-md-12">
+    <% @songs.each do |music_listing| %>
+    <%= link_to image_tag(music_listing.avatar.url(:thumb)), music_listing%>
+    <% end %>
+</div>
+</div>
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-11">
+<h2>Film recommendations for you:</h2>
+</div>
+</div>
+<div class="row">
+<div class="col-md-0"></div>
+<div class="col-md-12">
+    <% @films.each do |film_listing| %>
+    <%= link_to image_tag(film_listing.avatar.url(:thumb)), film_listing%>
+    <% end %>
+</div>
+</div>
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-11">
+    <h2>TV show recommendations for you:</h2>
+</div>
+</div>
+<div class="row">
+<div class="col-md-0"></div>
+<div class="col-md-12">
+    <% @tv.each do |tv_listing| %>
+    <%= link_to image_tag(tv_listing.avatar.url(:thumb)), tv_listing%>
+    <% end %>
+ </div>
 </div>

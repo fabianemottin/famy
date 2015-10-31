@@ -1,34 +1,38 @@
-<p id="notice"><%= notice %></p>
+
+
+  <p id="notice"><%= notice %></p>
+
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4">
+
 
 <p>
-  <strong>Name:</strong>
-  <%= @film_listing.name %>
+  <h1><%= @film_listing.name%></h1>
 </p>
 
 <p>
-  <strong>Videolink:</strong>
-  <%= @film_listing.videolink %>
+<%= raw(@film_listing.videolink) %>
 </p>
 
-<p>
-  <strong>Imagelink:</strong>
-  <%= @film_listing.imagelink %>
-</p>
 
 <p>
-  <strong>Infolink:</strong>
+  <strong>Find out more here:</strong>
   <%= @film_listing.infolink %>
 </p>
 
 <p>
   <strong>Language:</strong>
-  <%= @film_listing.language_id %>
+  <%= @film_listing.language.language %>
 </p>
 
 <p>
   <strong>Film category:</strong>
-  <%= @film_listing.film_category_id %>
+  <%= @film_listing.film_category.category %>
 </p>
 
 <%= link_to 'Edit', edit_film_listing_path(@film_listing) %> |
 <%= link_to 'Back', film_listings_path %>
+
+</div>
+<div class="col-md-4"></div>

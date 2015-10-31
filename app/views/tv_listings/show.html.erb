@@ -1,34 +1,36 @@
 <p id="notice"><%= notice %></p>
 
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4">
+
+
 <p>
-  <strong>Name:</strong>
-  <%= @tv_listing.name %>
+  <h1><%= @tv_listing.name%></h1>
 </p>
 
 <p>
-  <strong>Videolink:</strong>
-  <%= @tv_listing.videolink %>
+<%= raw(@tv_listing.videolink) %>
 </p>
 
-<p>
-  <strong>Imagelink:</strong>
-  <%= @tv_listing.imagelink %>
-</p>
 
 <p>
-  <strong>Infolink:</strong>
+  <strong>Find out more here:</strong>
   <%= @tv_listing.infolink %>
 </p>
 
 <p>
   <strong>Language:</strong>
-  <%= @tv_listing.language_id %>
+  <%= @tv_listing.language.language %>
 </p>
 
 <p>
-  <strong>Tv category:</strong>
-  <%= @tv_listing.tv_category_id %>
+  <strong>Song category:</strong>
+  <%= @tv_listing.tv_category.category %>
 </p>
 
 <%= link_to 'Edit', edit_tv_listing_path(@tv_listing) %> |
 <%= link_to 'Back', tv_listings_path %>
+
+</div>
+<div class="col-md-4"></div>
