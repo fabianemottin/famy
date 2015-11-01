@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.8'
 
 #heroku needs:
-gem 'rails_12factor', group: :producton #required by heroku
+gem 'rails_12factor', group: :production #required by heroku
 gem 'pg', group: :production
 gem 'sqlite3', group: :development
 
