@@ -1,0 +1,13 @@
+
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-11">
+    
+<h2>Spice up your day with this vibrant playlist</h2>
+
+<% @songs.each do |music_listing| %>
+ <div class="col-xs-6 col-md-3">
+    <%= link_to image_tag(music_listing.avatar.url(:medium)), music_listing, :class => "thumbnail" %>
+    <%end%>
+</div>
+</div>

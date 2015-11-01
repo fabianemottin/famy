@@ -1,20 +1,16 @@
 
-
 <div class="row">
-<div class="col-md-6">
+<div class="col-md-1"></div>
+<div class="col-md-10">
 <h1>All Films</h1>
-</div>
-<div class="col-md-6"></div>
-</div>
 
-<div class="row">
 
 <table>
    <div class="panel panel-default">
       <table class="table">
   <thead>
     <tr>
-      <th>Image</th>
+      <th>Film</th>
       <th>Langauge</th>
       <th>Film category</th>
       <th colspan="1"></th>
@@ -27,17 +23,18 @@
     <td><%=link_to image_tag(film_listing.avatar.url(:thumb)), film_listing%></td>
         <td><%= film_listing.language.language %></td>
           <td><%= film_listing.film_category.category %></td>
-        <td><%= link_to 'Show', film_listing %></td>
+        <td><%= link_to 'Find out more >', film_listing %></td>
        
       </tr>
     <% end %>
   </tbody>
 </div>
 </table>
-
-<br>
 </div>
 
-<%= link_to 'New Film listing', new_film_listing_path %>
+<%= link_to 'Add a new film', new_film_listing_path %>
+
+</div>
+<div class="col-md-1"></div>
 
 

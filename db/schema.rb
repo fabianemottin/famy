@@ -1,4 +1,3 @@
-
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -12,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151031115336) do
+ActiveRecord::Schema.define(version: 20151101143912) do
 
   create_table "film_categories", force: true do |t|
     t.string   "category"
@@ -33,6 +32,7 @@ ActiveRecord::Schema.define(version: 20151031115336) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.integer  "p_laylist_id"
   end
 
   create_table "languages", force: true do |t|
@@ -60,6 +60,13 @@ ActiveRecord::Schema.define(version: 20151031115336) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.integer  "p_laylist_id"
+  end
+
+  create_table "p_laylists", force: true do |t|
+    t.string   "playlistname"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "tv_categories", force: true do |t|
@@ -81,6 +88,7 @@ ActiveRecord::Schema.define(version: 20151031115336) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.integer  "p_laylist_id"
   end
 
   create_table "users", force: true do |t|

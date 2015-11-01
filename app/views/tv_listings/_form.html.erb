@@ -18,25 +18,24 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :videolink %><br>
+    <%= f.label :YouTube_link %><br>
     <%= f.text_field :videolink %>
   </div>
   <div class="field">
-    <%= f.label :imagelink %><br>
-    <%= f.text_field :imagelink %>
-  </div>
-  <div class="field">
-    <%= f.label :infolink %><br>
+    <%= f.label :Find_out_more_link %><br>
     <%= f.text_field :infolink %>
   </div>
 <div class="field">
     <%= f.label :language_id %><br>
     <%= collection_select(:tv_listing, :language_id, Language.all, :id, :language) %>
   </div>
-
     <div class="field">
-    <%= f.label :tv_id %><br>
+    <%= f.label :TV_show_category %><br>
     <%= collection_select(:tv_listing, :tv_category_id, TvCategory.all, :id, :category) %>
+  </div>
+    <div class="field">
+    <%= f.label :How_does_it_make_you_feel? %><br>
+      <%= collection_select(:tv_listing, :p_laylist_id, PLaylist.all, :id, :playlistname) %>
   </div>
   <div class="actions">
     <%= f.submit %>

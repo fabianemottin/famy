@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-11">
+    
+<%= image_tag "curated-playlist.png" %>
+ 
+ <h1><%= @p_laylist.playlistname %></h1>
+
+<br>
+
+ <div class="col-xs-6 col-md-3">
+ 	<% @songs.each do |music_listing| %>
+    <%= link_to image_tag(music_listing.avatar.url(:medium)), music_listing, :class => "thumbnail" %>
+    <%end%>
+</div>
+
+    
+ <div class="col-xs-6 col-md-3">
+ 	<% @films.each do |film_listing| %>
+    <%= link_to image_tag(film_listing.avatar.url(:medium)), film_listing, :class => "thumbnail" %>
+    <%end%>
+</div>
+
+    
+ <div class="col-xs-6 col-md-3">
+ 	<% @tv.each do |tv_listing| %>
+    <%= link_to image_tag(tv_listing.avatar.url(:medium)), tv_listing, :class => "thumbnail" %>
+    <%end%>
+</div>
+
+<%= link_to 'Back', p_laylists_path %>
+
+</div>
+</div>
+
+
+

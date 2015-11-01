@@ -30,8 +30,17 @@
   <%= @music_listing.music_category.category %>
 </p>
 
+<p>
+  <strong>This song makes you feel:</strong>
+  <%= @music_listing.p_laylist.playlistname %>
+</p>
+
 <%= link_to 'Edit', edit_music_listing_path(@music_listing) %> |
 <%= link_to 'Back', music_listings_path %>
 
+<div class="fb-comments" data-href="<%= request.original_url %>" data-numposts="5"></div>
+
 </div>
-<div class="col-md-4"></div>
+<div class="col-md-4">
+
+</div>

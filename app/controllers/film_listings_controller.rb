@@ -42,6 +42,6 @@ class FilmListingsController < ApplicationController
     end
 
     def film_listing_params
-      params.require(:film_listing).permit(:name, :videolink, :imagelink, :infolink, :language_id, :film_category_id, :avatar)
+      params.require(:film_listing).permit(:name, :videolink, :imagelink, :infolink, :language_id, :film_category_id, :avatar, :p_laylist_id)
     end
 end

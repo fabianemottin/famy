@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :p_laylists
+
   resources :tv_categories
 
   resources :film_categories

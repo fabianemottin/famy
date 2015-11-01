@@ -30,10 +30,16 @@
     <%= @tv_listing.tv_category.category %>
   </p>
 
+  <p>
+  <strong>This show makes you feel:</strong>
+  <%= @tv_listing.p_laylist.playlistname %>
+</p>
+
   <%= link_to 'Edit', edit_tv_listing_path(@tv_listing) %> |
   <%= link_to 'Back', tv_listings_path %>
-<p style="padding-top:10px;">
-   <strong>Share your favorite quote from this movie</strong>
+
+<div class="fb-comments" data-href="<%= request.original_url %>" data-numposts="5"></div>
+
 </p>
   </div>
   <div class="col-md-4"></div>

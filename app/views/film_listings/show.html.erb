@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
   <p id="notice"><%= notice %></p>
 
@@ -15,18 +14,11 @@
 <p>
 <%= raw(@film_listing.videolink) %>
 </p>
-=======
 
-      <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-
-<div class="video">
->>>>>>> a274604495534f535d5331f093f824e32a7bfd34
 
 
 <p>
-<<<<<<< HEAD
+
   <strong>Find out more here:</strong>
   <%= @film_listing.infolink %>
 </p>
@@ -41,34 +33,15 @@
   <%= @film_listing.film_category.category %>
 </p>
 
+<p>
+  <strong>This film makes you feel:</strong>
+  <%= @film_listing.p_laylist.playlistname %>
+</p>
+
 <%= link_to 'Edit', edit_film_listing_path(@film_listing) %> |
 <%= link_to 'Back', film_listings_path %>
 
+<div class="fb-comments" data-href="<%= request.original_url %>" data-numposts="5"></div>
+
 </div>
 <div class="col-md-4"></div>
-=======
-  <strong><%= @film_listing.name %></strong>
-</p>
-
-<%= raw(@film_listing.videolink) %>
-
-</div>
-
-<div>
-
-<p>
-<strong>Share your favorite quote from this movie</strong>
-</p>
-
-
-
-
-</div>
-
-
-        </div>
-        <div class="col-md-3"></div>
-      </div>
-
-
->>>>>>> a274604495534f535d5331f093f824e32a7bfd34
