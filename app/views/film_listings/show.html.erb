@@ -16,13 +16,6 @@
 </p>
 
 
-
-<p>
-
-  <strong>Find out more here:</strong>
-  <%= @film_listing.infolink %>
-</p>
-
 <p>
   <strong>Language:</strong>
   <%= @film_listing.language.language %>
@@ -33,13 +26,15 @@
   <%= @film_listing.film_category.category %>
 </p>
 
-<p>
-  <strong>This film makes you feel:</strong>
-  <%= @film_listing.p_laylist.playlistname %>
-</p>
 
 <%= link_to 'Edit', edit_film_listing_path(@film_listing) %> |
 <%= link_to 'Back', film_listings_path %>
+<br>
+<br>
+<p>
+  <strong> In the discussion below, share things you have learned or any questions you have</strong>
+ </p>
+<br>
 
 <div class="fb-comments" data-href="<%= request.original_url %>" data-numposts="5"></div>
 
