@@ -9,6 +9,8 @@ gem 'rails_12factor', group: :production #required by heroku
 gem 'pg', group: :production
 gem 'sqlite3', group: :development
 
+gem 'aws-sdk','<2.0'
+
 # Use SCSS for stylesheets
 gem 'devise'
 # user authentication
